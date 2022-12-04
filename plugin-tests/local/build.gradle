@@ -1,0 +1,16 @@
+buildscript {
+  repositories {
+	jcenter()
+  }
+  dependencies {
+    classpath 'com.blogspot.jvalentino.gradle:ant-demo:1.0.0'
+  }
+}
+
+apply plugin: 'ant-demo'
+
+xslt {
+    input = 'input.xml'
+    output = 'build/output.html'
+    style = 'input.xsl'
+}
